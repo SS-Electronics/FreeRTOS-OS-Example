@@ -9,7 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include root/init/subdir.mk
+-include root/FreeRTOS-OS/init/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
@@ -85,8 +85,8 @@ all: main-build
 main-build: FreeRTOS_OS_Prj.elf secondary-outputs
 
 # Tool invocations
-FreeRTOS_OS_Prj.elf FreeRTOS_OS_Prj.map: $(OBJS) $(USER_OBJS) /home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS_OS_Prj/STM32F411VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "FreeRTOS_OS_Prj.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS_OS_Prj/STM32F411VETX_FLASH.ld" -Wl,-Map="FreeRTOS_OS_Prj.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+FreeRTOS_OS_Prj.elf FreeRTOS_OS_Prj.map: $(OBJS) $(USER_OBJS) /home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS-OS-Example/FreeRTOS_OS_Prj/STM32F411VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "FreeRTOS_OS_Prj.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS-OS-Example/FreeRTOS_OS_Prj/STM32F411VETX_FLASH.ld" -Wl,-Map="FreeRTOS_OS_Prj.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
