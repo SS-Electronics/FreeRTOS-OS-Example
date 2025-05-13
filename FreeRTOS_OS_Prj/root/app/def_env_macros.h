@@ -17,28 +17,23 @@
 #define APP_DEF_ENV_MACROS_H_
 
 
+
+#if defined(STM32F411xE)
+
+#define DEVICE_VARINAT					1
+
 #include <stm32f4xx.h>
 #include <stm32f4xx_hal.h>
 #include <stm32f4xx_it.h>
 
-/* *****************************************************
- *
- * ENV related data types
- *
- * *****************************************************/
-
 #define __TYPE_HW_UART_HANDLE_TYPE 		UART_HandleTypeDef
-
 #define __TYPE_HW_IIC_HANDLE_TYPE		I2C_HandleTypeDef
-
 #define __TYPE_HW_SPI_HANDLE_TYPE		SPI_HandleTypeDef
-
 #define __TYPE_HW_ADC_HANDLE_TYPE		ADC_HandleTypeDef
-
 #define __TYPE_HW_IWDG_HANDLE_TYPE		IWDG_HandleTypeDef
-
 #define __TYPE_HW_TIMER_HANDLE_TYPE		TIM_HandleTypeDef
 
+#endif
 
 
 

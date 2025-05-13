@@ -17,15 +17,33 @@
 #define APP_CONF_OS_H_
 
 
-#define NO_OF_UART				1
-#define NO_OF_IIC				1
-#define NO_OF_SPI				1
-#define NO_OF_TIMER				1
-#define NO_OF_ADC				1
-#define IWDG_INCLUDE			1
+#define NO_OF_UART								1
+#define CONF_UART_TXN_TIMEOUT_MS				10
 
 
 
+
+
+
+#define NO_OF_IIC								1
+#define NO_OF_SPI								1
+#define NO_OF_TIMER								1
+#define NO_OF_ADC								1
+#define IWDG_INCLUDE							1
+
+
+
+
+#define CONF_INC_PROC_OS_SHELL_MGMT				1
+
+
+
+
+
+
+
+
+#define CONF_IPC_RD_UART_1_RX_SIZE				(1024)
 
 
 #endif /* APP_CONF_OS_H_ */

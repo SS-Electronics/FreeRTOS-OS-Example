@@ -110,12 +110,14 @@ int main(void)
   MX_USART1_UART_Init();
   MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
-  os_add_drv_uart_handle		(huart1,HW_ID_UART_1);
-  os_add_drv_iic_handle			(huart1,HW_ID_IIC_1);
-  os_add_drv_spi_handle			(huart1,HW_ID_SPI_1);
-  os_add_drv_adc_handle			(huart1,HW_ID_ADC_1);
-  os_add_drv_timer_handle		(huart1,HW_ID_TIM_1);
-  os_add_drv_iwdg_handle		(huart1,0);
+  os_add_drv_uart_handle		(&huart1,HW_ID_UART_1);
+  os_add_drv_iic_handle			(&hi2c1,HW_ID_IIC_1);
+  os_add_drv_spi_handle			(&hspi1,HW_ID_SPI_1);
+  os_add_drv_adc_handle			(&hadc1,HW_ID_ADC_1);
+  os_add_drv_timer_handle		(&htim1,HW_ID_TIM_1);
+  os_add_drv_iwdg_handle		(&hiwdg);
+  os_entry();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
