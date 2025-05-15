@@ -26,12 +26,12 @@
 #include <stm32f4xx_hal.h>
 #include <stm32f4xx_it.h>
 
-#define __TYPE_HW_UART_HANDLE_TYPE 		UART_HandleTypeDef
-#define __TYPE_HW_IIC_HANDLE_TYPE		I2C_HandleTypeDef
-#define __TYPE_HW_SPI_HANDLE_TYPE		SPI_HandleTypeDef
-#define __TYPE_HW_ADC_HANDLE_TYPE		ADC_HandleTypeDef
-#define __TYPE_HW_IWDG_HANDLE_TYPE		IWDG_HandleTypeDef
-#define __TYPE_HW_TIMER_HANDLE_TYPE		TIM_HandleTypeDef
+typedef UART_HandleTypeDef __TYPE_HW_UART_HANDLE_TYPE ;
+typedef I2C_HandleTypeDef __TYPE_HW_IIC_HANDLE_TYPE	;
+typedef SPI_HandleTypeDef __TYPE_HW_SPI_HANDLE_TYPE	;
+typedef ADC_HandleTypeDef __TYPE_HW_ADC_HANDLE_TYPE;
+typedef IWDG_HandleTypeDef __TYPE_HW_IWDG_HANDLE_TYPE;
+typedef TIM_HandleTypeDef __TYPE_HW_TIMER_HANDLE_TYPE;
 
 #endif
 

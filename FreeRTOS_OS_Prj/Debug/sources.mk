@@ -41,5 +41,13 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
+root/FreeRTOS-OS/drivers \
 root/FreeRTOS-OS/init \
+root/FreeRTOS-OS/ipc \
+root/FreeRTOS-OS/kernel/FreeRTOS \
+root/FreeRTOS-OS/kernel/FreeRTOS/portable/GCC/ARM_CM4 \
+root/FreeRTOS-OS/kernel/FreeRTOS/portable/MemMang \
+root/FreeRTOS-OS/lib \
+root/FreeRTOS-OS/mm \
+root/FreeRTOS-OS/services \
 

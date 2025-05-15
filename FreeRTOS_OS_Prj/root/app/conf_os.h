@@ -44,6 +44,11 @@
 
 
 #define CONF_IPC_RD_UART_1_RX_SIZE				(1024)
+#define CONF_IPC_PRINTK_BUFFER_SIZE				(1024)
+
+
+
+
 
 
 #endif /* APP_CONF_OS_H_ */
