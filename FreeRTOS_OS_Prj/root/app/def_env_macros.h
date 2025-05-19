@@ -37,6 +37,33 @@ typedef TIM_HandleTypeDef __TYPE_HW_TIMER_HANDLE_TYPE;
 
 
 
+#ifndef CMSIS_device_header
+
+#if defined(STM32F429xx)
+#define CMSIS_device_header "stm32f4xx.h"
+#endif
+
+#if defined(STM32H7A3xxQ)
+#define CMSIS_device_header "stm32h7xx.h"
+#endif
+
+#if defined (STM32L431xx)
+#define CMSIS_device_header "stm32l4xx_hal.h"
+#endif
+
+#if defined (STM32H743xx)
+#define CMSIS_device_header <stm32h7xx_hal.h>
+#endif
+
+#if defined (STM32F765xx)
+#define CMSIS_device_header <stm32f7xx_hal.h>
+#endif
+
+#if defined (STM32F411xE )
+#define CMSIS_device_header <stm32f4xx_hal.h>
+#endif
+
+#endif /* CMSIS_device_header */
 
 
 

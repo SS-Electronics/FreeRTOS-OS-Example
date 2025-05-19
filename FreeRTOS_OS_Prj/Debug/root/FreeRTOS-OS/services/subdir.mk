@@ -5,13 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../root/FreeRTOS-OS/services/kernel_syscall.c 
+../root/FreeRTOS-OS/services/kernel_service_core.c \
+../root/FreeRTOS-OS/services/kernel_syscall.c \
+../root/FreeRTOS-OS/services/serv_uart_mgmt.c 
 
 C_DEPS += \
-./root/FreeRTOS-OS/services/kernel_syscall.d 
+./root/FreeRTOS-OS/services/kernel_service_core.d \
+./root/FreeRTOS-OS/services/kernel_syscall.d \
+./root/FreeRTOS-OS/services/serv_uart_mgmt.d 
 
 OBJS += \
-./root/FreeRTOS-OS/services/kernel_syscall.o 
+./root/FreeRTOS-OS/services/kernel_service_core.o \
+./root/FreeRTOS-OS/services/kernel_syscall.o \
+./root/FreeRTOS-OS/services/serv_uart_mgmt.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +27,7 @@ root/FreeRTOS-OS/services/%.o root/FreeRTOS-OS/services/%.su root/FreeRTOS-OS/se
 clean: clean-root-2f-FreeRTOS-2d-OS-2f-services
 
 clean-root-2f-FreeRTOS-2d-OS-2f-services:
-	-$(RM) ./root/FreeRTOS-OS/services/kernel_syscall.cyclo ./root/FreeRTOS-OS/services/kernel_syscall.d ./root/FreeRTOS-OS/services/kernel_syscall.o ./root/FreeRTOS-OS/services/kernel_syscall.su
+	-$(RM) ./root/FreeRTOS-OS/services/kernel_service_core.cyclo ./root/FreeRTOS-OS/services/kernel_service_core.d ./root/FreeRTOS-OS/services/kernel_service_core.o ./root/FreeRTOS-OS/services/kernel_service_core.su ./root/FreeRTOS-OS/services/kernel_syscall.cyclo ./root/FreeRTOS-OS/services/kernel_syscall.d ./root/FreeRTOS-OS/services/kernel_syscall.o ./root/FreeRTOS-OS/services/kernel_syscall.su ./root/FreeRTOS-OS/services/serv_uart_mgmt.cyclo ./root/FreeRTOS-OS/services/serv_uart_mgmt.d ./root/FreeRTOS-OS/services/serv_uart_mgmt.o ./root/FreeRTOS-OS/services/serv_uart_mgmt.su
 
 .PHONY: clean-root-2f-FreeRTOS-2d-OS-2f-services
 

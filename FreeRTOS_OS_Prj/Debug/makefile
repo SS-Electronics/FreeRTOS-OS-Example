@@ -14,6 +14,7 @@ RM := rm -rf
 -include root/FreeRTOS-OS/lib/subdir.mk
 -include root/FreeRTOS-OS/kernel/FreeRTOS/portable/MemMang/subdir.mk
 -include root/FreeRTOS-OS/kernel/FreeRTOS/portable/GCC/ARM_CM4/subdir.mk
+-include root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/subdir.mk
 -include root/FreeRTOS-OS/kernel/FreeRTOS/subdir.mk
 -include root/FreeRTOS-OS/ipc/subdir.mk
 -include root/FreeRTOS-OS/init/subdir.mk

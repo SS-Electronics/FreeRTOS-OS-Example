@@ -5,29 +5,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../root/FreeRTOS-OS/drivers/drv_cpu.c \
-../root/FreeRTOS-OS/drivers/drv_time.c \
-../root/FreeRTOS-OS/drivers/drv_uart.c 
+../root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/cmsis_os2.c 
 
 C_DEPS += \
-./root/FreeRTOS-OS/drivers/drv_cpu.d \
-./root/FreeRTOS-OS/drivers/drv_time.d \
-./root/FreeRTOS-OS/drivers/drv_uart.d 
+./root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/cmsis_os2.d 
 
 OBJS += \
-./root/FreeRTOS-OS/drivers/drv_cpu.o \
-./root/FreeRTOS-OS/drivers/drv_time.o \
-./root/FreeRTOS-OS/drivers/drv_uart.o 
+./root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/cmsis_os2.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-root/FreeRTOS-OS/drivers/%.o root/FreeRTOS-OS/drivers/%.su root/FreeRTOS-OS/drivers/%.cyclo: ../root/FreeRTOS-OS/drivers/%.c root/FreeRTOS-OS/drivers/subdir.mk
+root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/%.o root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/%.su root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/%.cyclo: ../root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/%.c root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS-OS-Example/FreeRTOS_OS_Prj/root/FreeRTOS-OS/include" -I"/home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS-OS-Example/FreeRTOS_OS_Prj/root/app" -I"/home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS-OS-Example/FreeRTOS_OS_Prj/root/FreeRTOS-OS/kernel/FreeRTOS" -I"/home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS-OS-Example/FreeRTOS_OS_Prj/root/FreeRTOS-OS/kernel/FreeRTOS/include" -I"/home/subhajitroy005/sr005/Projects/Base_Software/FreeRTOS-OS-Example/FreeRTOS_OS_Prj/root/FreeRTOS-OS/kernel/FreeRTOS/portable/GCC/ARM_CM4" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
-clean: clean-root-2f-FreeRTOS-2d-OS-2f-drivers
+clean: clean-root-2f-FreeRTOS-2d-OS-2f-kernel-2f-FreeRTOS-2f-CMSIS_RTOS_V2
 
-clean-root-2f-FreeRTOS-2d-OS-2f-drivers:
-	-$(RM) ./root/FreeRTOS-OS/drivers/drv_cpu.cyclo ./root/FreeRTOS-OS/drivers/drv_cpu.d ./root/FreeRTOS-OS/drivers/drv_cpu.o ./root/FreeRTOS-OS/drivers/drv_cpu.su ./root/FreeRTOS-OS/drivers/drv_time.cyclo ./root/FreeRTOS-OS/drivers/drv_time.d ./root/FreeRTOS-OS/drivers/drv_time.o ./root/FreeRTOS-OS/drivers/drv_time.su ./root/FreeRTOS-OS/drivers/drv_uart.cyclo ./root/FreeRTOS-OS/drivers/drv_uart.d ./root/FreeRTOS-OS/drivers/drv_uart.o ./root/FreeRTOS-OS/drivers/drv_uart.su
+clean-root-2f-FreeRTOS-2d-OS-2f-kernel-2f-FreeRTOS-2f-CMSIS_RTOS_V2:
+	-$(RM) ./root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/cmsis_os2.cyclo ./root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/cmsis_os2.d ./root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/cmsis_os2.o ./root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/cmsis_os2.su
 
-.PHONY: clean-root-2f-FreeRTOS-2d-OS-2f-drivers
+.PHONY: clean-root-2f-FreeRTOS-2d-OS-2f-kernel-2f-FreeRTOS-2f-CMSIS_RTOS_V2
 
