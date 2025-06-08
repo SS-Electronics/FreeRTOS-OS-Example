@@ -48,7 +48,9 @@ root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2 \
 root/FreeRTOS-OS/kernel/FreeRTOS \
 root/FreeRTOS-OS/kernel/FreeRTOS/portable/GCC/ARM_CM4 \
 root/FreeRTOS-OS/kernel/FreeRTOS/portable/MemMang \
+root/FreeRTOS-OS/kernel \
 root/FreeRTOS-OS/lib \
 root/FreeRTOS-OS/mm \
 root/FreeRTOS-OS/services \
+root/app \
 

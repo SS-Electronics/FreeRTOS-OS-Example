@@ -17,18 +17,14 @@
 #define APP_CONF_OS_H_
 
 
-#define NO_OF_UART												1
+
+
+#define NO_OF_UART												2
 #define CONF_UART_TXN_TIMEOUT_MS								10
 
-
 #define NO_OF_TIMER												1
-
-
-
-
 #define NO_OF_IIC												1
 #define NO_OF_SPI												1
-
 #define NO_OF_ADC												1
 #define IWDG_INCLUDE											1
 
@@ -39,16 +35,27 @@
 
 
 
+
+
+
+#define CONF_NO_OF_MAX_APP_THREAD								5
+
+
+
+
 #define CONF_THREAD_UART_MGMT_STACK_SIZE						(1024)
-#define CONF_THREAD_UART_MGMT_PRIORITY							(1024)
+#define CONF_THREAD_UART_MGMT_PRIORITY							(1)
 
 
 
 
 #define CONF_IPC_RD_UART_1_RX_SIZE								(1024)
-#define CONF_IPC_RD_UART_2_RX_SIZE								(1024)
 #define CONF_MAX_CHAR_IN_PRINTK									(200)
 #define CONF_IPC_PRINTK_BUFFER_SIZE								(1024)
+
+#define CONF_IPC_RD_UART_2_RX_SIZE								(1024)
+#define CONF_IPC_RD_UART_2_TX_SIZE								(1024)
+
 
 
 

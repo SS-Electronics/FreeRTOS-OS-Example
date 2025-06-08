@@ -12,19 +12,51 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 */
-#ifndef APP_CONF_BOARD_H_
-#define APP_CONF_BOARD_H_
-
-#include <def_hw.h>
-#include <def_std.h>
 
 
+#include <os/kernel.h>
+
+int pid = 0;
 
 
 
+void app_task_1(void* data)
+{
+
+	int a = 20;
+
+	while(1)
+	{
+		a++;
+	}
+}
 
 
-#define COMM_PRINTK_HW_ID	HW_ID_UART_2
+void app_task_2(void* data)
+{
+
+	int a = 20;
+
+	while(1)
+	{
+		a++;
+	}
+}
+
+int app_main()
+{
+
+	int k = 0;
+	k++;
+
+	pid = os_create_thread(app_task_1, "TASK_1", 512, NULL);
+	pid = os_create_thread(app_task_2, "TASK_2", 512, NULL);
+
+
+
+
+	return 0;
+}
 
 
 
@@ -33,13 +65,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-#endif /* APP_CONF_BOARD_H_ */

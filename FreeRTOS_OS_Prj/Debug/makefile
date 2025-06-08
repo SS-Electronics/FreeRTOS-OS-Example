@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include root/app/subdir.mk
 -include root/FreeRTOS-OS/services/subdir.mk
 -include root/FreeRTOS-OS/mm/subdir.mk
 -include root/FreeRTOS-OS/lib/subdir.mk
@@ -16,6 +17,7 @@ RM := rm -rf
 -include root/FreeRTOS-OS/kernel/FreeRTOS/portable/GCC/ARM_CM4/subdir.mk
 -include root/FreeRTOS-OS/kernel/FreeRTOS/CMSIS_RTOS_V2/subdir.mk
 -include root/FreeRTOS-OS/kernel/FreeRTOS/subdir.mk
+-include root/FreeRTOS-OS/kernel/subdir.mk
 -include root/FreeRTOS-OS/ipc/subdir.mk
 -include root/FreeRTOS-OS/init/subdir.mk
 -include root/FreeRTOS-OS/drivers/subdir.mk
